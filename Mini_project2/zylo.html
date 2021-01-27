@@ -16,6 +16,9 @@
         .navbar-dark{
             background-color: #4d577c!important;
         }
+        input{
+          margin: 2px 2px 8px 2px;
+        }
     </style>
     <title>Hello, world!</title>
   </head>
@@ -66,6 +69,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Spending</h5>
                           <p class="card-text">10M</p>
+                          <a href="#" class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#showspending">show more</a>
                         </div>
               </div>
           </div>
@@ -74,6 +78,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Cost</h5>
                   <p class="card-text">10M</p>
+                  <a href="#" class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#showcost">show more</a>
                 </div>
       </div>
   </div>
@@ -82,6 +87,7 @@
         <div class="card-body">
           <h5 class="card-title">This Month</h5>
           <p class="card-text">10M</p>
+          <a href="#" class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#showthis">show more</a>
         </div>
 </div>
 </div>
@@ -90,14 +96,27 @@
         <div class="card-body">
           <h5 class="card-title">Next Month</h5>
           <p class="card-text">10M</p>
+          <a href="#" class="btn btn-link" data-bs-toggle="collapse" data-bs-target="#shownext">show more</a>
         </div>
 </div>
+</div>
+<div class="collapse bg-success text-white p-4" id="showspending">
+  This is div for showing spending summary
+</div>
+<div class="collapse bg-warning text-white p-4" id="showcost">
+  This is div for showing Cost summary
+</div>
+<div class="collapse bg-info text-white p-4" id="showthis">
+  This is div for showing This Month summary
+</div>
+<div class="collapse bg-danger text-white p-4" id="shownext">
+  This is div for showing Next Month summary
 </div>
 <div class=" p-2 rounded">
     <div class="row">  
         <div class="col-8"><h1>Applications</h1></div>
         <div class="col-4 btn text-right">
-            <button type="button" class="btn btn-primary">Add new Application </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add new Application </button>
         </div>
         </div>
   </div>
@@ -180,6 +199,31 @@
                 </div>
           </div>
     </main>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new Application</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Add Details Below:
+        <p>
+          <input type="text" class="formcontrol" placeholder="Enter First name">
+          <input type="text" class="formcontrol" placeholder="Enter Last name">
+          <input type="text" class="formcontrol" placeholder="Enter Age">
+          <input type="text" class="formcontrol" placeholder="Enter Contact no.">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add new</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save and Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
