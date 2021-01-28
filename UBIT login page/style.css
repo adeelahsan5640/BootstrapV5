@@ -1,0 +1,13 @@
+body{
+display: flex;
+align-items: center;
+}
+h2{
+    margin-bottom: 50px;
+    text-align: center;
+}
+.login{
+    margin-left: 400px;
+    margin-right: 400px;
+
+}
